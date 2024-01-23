@@ -1,8 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
-import Footer from '@/components/Footer'
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import Footer from '@/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,14 +16,14 @@ export default function RootLayout({ children }) {
       
       
       <body className={inter.className}>
-      <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+     
       <div className="Container">
       
         <Navbar/>
        {children}
        <Footer/>
        </div>
-       </AppRouterCacheProvider>
+       
         </body>
     </html>
   )
